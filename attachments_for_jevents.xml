@@ -16,5 +16,9 @@
 	<folder>language</folder>
     </files>
 
+    <updateservers>
+      <server type="extension" priority="1" name="Attachments_for_JEvents updates">http://jmcameron.net/attachments/updates/attachments_for_jevents/updates.xml</server>
+    </updateservers>
+
 </extension>
 
