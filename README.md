@@ -1,16 +1,18 @@
-attachments_for_simplecalendar
-==============================
+attachments_for_jevents
+=======================
 
-WARNING: This version will only work with Attachments 3.1.4-Beta6 or later!
+WARNING: This version will only work with Attachments 3.2.2 or later!
          If this version (or later) has not been released, please contact the
          Attachments extension Author, Jonathan M. Cameron, to obtain
          pre-release version at jmcameron@jmcameron.net.
 
-Attachments plugin for SimpleCalendar (for Joomla)
+Attachments plugin for JEvents (for Joomla)
 
-This plugin allows users to add attachments to SimpleCalendar items in Joomla.
+This plugin allows users to add attachments to JEvents items in Joomla.
 
-By Fabrizio Albonico, software@albonico.ch
-   Updates and fixes by Jonathan M. Cameron
+By Jonathan M. Cameron
+
+Created February 20, 2015
+
 
 For License/Copying information, please see the file LICENSE.txt
