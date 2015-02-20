@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="attachments" version="2.5" method="upgrade">
+    <name>plg_attachments_for_jevents</name>
+    <version>3.2.0-Beta1</version>
+    <creationDate>February 20, 2015</creationDate>
+    <author>Jonthan M. Cameron</author>
+    <authorEmail>jmcameron@jmcameron.net</authorEmail>
+    <authorUrl>http://jmcameron.net/attachments</authorUrl>
+    <copyright>(C) 2015 Jonathan M. Cameron. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <description>ATTACH_ATTACHMENTS_FOR_JEVENTS_PLUGIN_DESCRIPTION</description>
+
+    <files>
+        <filename plugin="attachments_for_jevents">attachments_for_jevents.php</filename>
+	<filename>index.html</filename>
+	<folder>language</folder>
+    </files>
+
+</extension>
+
