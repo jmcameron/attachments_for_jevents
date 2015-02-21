@@ -31,6 +31,5 @@ INSTALLATION
 
 3. Enable the Attachments for JEvents plugin
 
-4. In whatever JEvents module you are using to display JEvents on the front
-   page, go to its options in the Module manager, and make sure that the
-   option "Apply content plugins to module output" is enabled.
+You should be able to add and see attachments on any JEvent event detail view
+on the front end.
