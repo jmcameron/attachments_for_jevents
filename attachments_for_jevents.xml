@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="plugin" group="attachments" version="2.5" method="upgrade">
     <name>plg_attachments_for_jevents</name>
-    <version>3.2.0-Beta1</version>
+    <version>3.2.0-Beta3</version>
     <creationDate>February 20, 2015</creationDate>
     <author>Jonthan M. Cameron</author>
     <authorEmail>jmcameron@jmcameron.net</authorEmail>
