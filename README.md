@@ -27,9 +27,24 @@ INSTALLATION
    no need to uninstall it first.  Just install the new version over the old
    one.
 
+
+2. One small addition to the JEvents code-base is necessary.  Edit this file
+   on your web server:
+
+      administrator/components/com_jevents/views/icalevent/tmpl/edit.php
+
+   Around line 26, find this line:
+
+      JHtml::_('behavior.calendar');
+
+   insert this line right after it:
+
+      JHtml::_('behavior.modal', 'a.modal-button');
+
+
 2. Install the Attachments for JEvents plugin.
 
 3. Enable the Attachments for JEvents plugin
 
 You should be able to add and see attachments on any JEvent event detail view
-on the front end.
+on the front end or back end.
