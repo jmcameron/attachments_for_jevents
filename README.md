@@ -43,7 +43,7 @@ INSTALLATION
         JHtml::_('behavior.modal', 'a.modal-button');
 
 
-3. Install the Attachments for JEvents plugin.
+3. Install the Attachments for JEvents plugin
 
 4. Enable the Attachments for JEvents plugin
 
