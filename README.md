@@ -28,23 +28,24 @@ INSTALLATION
    one.
 
 
-2. One small addition to the JEvents code-base is necessary.  Edit this file
-   on your web server:
+2. One small addition to the JEvents code-base is necessary.  
 
-       administrator/components/com_jevents/views/icalevent/tmpl/edit.php
+   **Edit this file on your web server:**
 
-   Around line 26, find this line:
+        administrator/components/com_jevents/views/icalevent/tmpl/edit.php
 
-       JHtml::_('behavior.calendar');
+   **Around line 26, find this line:**
 
-   insert this line right after it:
+        JHtml::_('behavior.calendar');
 
-       JHtml::_('behavior.modal', 'a.modal-button');
+   **insert this line right after it:**
+
+        JHtml::_('behavior.modal', 'a.modal-button');
 
 
-2. Install the Attachments for JEvents plugin.
+3. Install the Attachments for JEvents plugin.
 
-3. Enable the Attachments for JEvents plugin
+4. Enable the Attachments for JEvents plugin
 
 You should be able to add and see attachments on any JEvent event detail view
 on the front end or back end.
