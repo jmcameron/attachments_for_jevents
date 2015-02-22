@@ -31,15 +31,15 @@ INSTALLATION
 2. One small addition to the JEvents code-base is necessary.  Edit this file
    on your web server:
 
-      administrator/components/com_jevents/views/icalevent/tmpl/edit.php
+       administrator/components/com_jevents/views/icalevent/tmpl/edit.php
 
    Around line 26, find this line:
 
-      JHtml::_('behavior.calendar');
+       JHtml::_('behavior.calendar');
 
    insert this line right after it:
 
-      JHtml::_('behavior.modal', 'a.modal-button');
+       JHtml::_('behavior.modal', 'a.modal-button');
 
 
 2. Install the Attachments for JEvents plugin.
