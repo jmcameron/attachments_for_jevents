@@ -52,11 +52,11 @@ class AttachmentsPlugin_Com_JEvents extends AttachmentsPlugin
 
 		// Add the information about the default entity (event)
 		$this->entities[]                   = 'jevent';
-		$this->entity_name['jevent']			= 'jevent';
+		$this->entity_name['jevent']		= 'jevent';
 		$this->entity_name['default']       = 'jevent';
 		$this->entity_table['jevent']      	= 'jevents_vevent';
-		$this->entity_id_field['jevent']    	= 'ev_id';
-		$this->entity_title_field['jevent'] 	= 'summary'; # actually in vevdetail
+		$this->entity_id_field['jevent']    = 'ev_id';
+		$this->entity_title_field['jevent'] = 'summary'; # actually in vevdetail
 
 		// Always load the language
 		$this->loadLanguage();
@@ -335,7 +335,7 @@ class AttachmentsPlugin_Com_JEvents extends AttachmentsPlugin
 		switch ($parent_entity)
 		{
 			default:
-				$url .= "&parent_type=com_jevents.event&from=$from";
+				$url .= "&parent_type=com_jevents.jevent&from=$from";
 		}
 
 		return $url;
@@ -610,7 +610,7 @@ class AttachmentsPlugin_Com_JEvents extends AttachmentsPlugin
 		}
 
 		// Check specific edit permission.
-		if ($user->authorise('core.edit', 'com_jevents.event.'.$event_id)) {
+		if ($user->authorise('core.edit', 'com_jevents.jevent.'.$event_id)) {
 			return true;
 		}
 
@@ -622,7 +622,7 @@ class AttachmentsPlugin_Com_JEvents extends AttachmentsPlugin
 
 		// No general permissions, see if 'edit own' is permitted for this event
 		if ( $user->authorise('core.edit.own', 'com_jevents') ||
-			 $user->authorise('core.edit.own', 'com_jevents.event.'.$event_id) ) {
+			 $user->authorise('core.edit.own', 'com_jevents.jevent.'.$event_id) ) {
 
 			// Yes user can 'edit.own', make sure the user created the event (owns it)
 			$db = JFactory::getDBO();
@@ -1071,78 +1071,6 @@ class AttachmentsPlugin_Com_JEvents extends AttachmentsPlugin
 			}
 
 		return parent::insertAttachmentsList($content, $parent_id, $parent_entity);
-	}
-
-
-	/** Insert the attachments list into the entity editor page
-	 *
-	 * @param	int		$parent_id		the ID for the parent object
-	 * @param	string	$parent_entity	the type of entity for this parent type
-	 * @param	string	$attachments	the attachments list as a string
-	 * @param	string	$body			the editor page text
-	 *
-	 * @return	string	the modified editor page text (false for failure)
-	 */
-	public function insertAttachmentsListInEditor($parent_id, $parent_entity, $attachments, $body)
-	{
-		// Force loading of the attachments style sheet
-		AttachmentsPlugin_Com_JEvents::injectStyleSheet('/media/com_attachments/css/attachments_list.css');
-		AttachmentsPlugin_Com_JEvents::injectStyleSheet('/media/com_attachments/css/attachments_hide.css');
-
-		// Force loading of the refresh script
- 		AttachmentsPlugin_Com_JEvents::injectScript('/media/com_attachments/js/attachments_refresh.js');
-
-		// Construct the add-attachments button
-		$add_attachments_btn = AttachmentsHelper::attachmentButtonsHTML($this->parent_type, $parent_id, $parent_entity, 1, 'closeme');
-
-		// Force the red link despite Bootstraps intrusive CSS
-		$add_attachments_btn = str_replace('<a class="modal-button"',
-										   '<a class="modal-button" style="color: red; text-decoration: none;',
-										   $add_attachments_btn);
-
-		// Fix the Add Attachments URL in the back end
-		$app = JFactory::getApplication();
-		if ($app->isAdmin()) {
-			// Adjust the url to set it up for the back end
-			$add_attachments_btn = str_replace('task=upload', 'task=attachment.add', $add_attachments_btn);
-			$add_attachments_btn = str_replace('parent_type=com_jevents:jevent', 'parent_type=com_jevents.jevent', $add_attachments_btn);
-			}
-
-		// Add 'Add Attachment' button to the attachments list (no editor-xtd add button plugin)
-		$attachments .= $add_attachments_btn;
-
-		// Insert the attachments above the editor buttons
-		// NOTE: Assume that anyone editing the entity can see its attachments
-		$reptag = '<div class="toggle-editor btn-toolbar';
-		$body = str_replace($reptag, $attachments . $reptag, $body);
-		return $body;
-	}
-
-
-	private function injectStyleSheet($filename)
-	{
-		$js  = "<script>";
-		$js .= "var lnk=document.createElement('link');";
-		$js .= "lnk.href='" . JUri::root(true) . $filename . "';";
-		$js .= "lnk.rel='stylesheet';";
-		$js .= "lnk.type='text/css';";
-		$js .= "(document.head||document.documentElement).appendChild(lnk);";
-		$js .= "</script>";
-
-		echo $js;
-	}
-
-
-	private function injectScript($filename)
-	{
-		$js  = "<script>";
-		$js .= "var s=document.createElement('script');";
-		$js .= "s.type='text/javascript';";
-		$js .= "s.src='" . JUri::root(true) . $filename . "';";
-		$js .= "(document.head||document.documentElement).appendChild(s);";
-		$js .= "</script>";
-
-		echo $js;
 	}
 
 }
