@@ -36,7 +36,9 @@ INSTALLATION
 
     * In the JEvents manager (back end), click on [Configuration]
     * Select "Event Editing"
+    * Select the "Intermedia" or "Advanced" options setting
     * Enable the "Show editors button extensions" option (set to 'YES')
+    * Save
 
 You should be able to add and see attachments on any JEvent event detail view
 on the front end or back end.
