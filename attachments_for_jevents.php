@@ -1028,8 +1028,6 @@ class AttachmentsPlugin_Com_JEvents extends AttachmentsPlugin
 	 */
 	public function getParentIdInEditor($parent_entity, $view, $layout)
 	{
-		$task = JRequest::getCmd('task');
-
 		$app = JFactory::getApplication();
 		if ($app->isAdmin()) {
 			$cid = JRequest::getVar('cid');
@@ -1038,6 +1036,7 @@ class AttachmentsPlugin_Com_JEvents extends AttachmentsPlugin
 			}
 
 		// Deal with event detail editor (in frontend)
+		$task = JRequest::getCmd('task');
 		if (($parent_entity == 'jevent') AND ($task == 'icalevent.edit')) {
 			$id = JRequest::getInt('evid', $default=null);
 			}
@@ -1072,7 +1071,6 @@ class AttachmentsPlugin_Com_JEvents extends AttachmentsPlugin
 
 		return parent::insertAttachmentsList($content, $parent_id, $parent_entity);
 	}
-
 }
 
 
