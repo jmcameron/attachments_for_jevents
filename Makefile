@@ -8,7 +8,7 @@ FILES = *.php *.xml language/*/*
 
 all: $(ZIPFILE)
 
-ZIPIGNORES = -x "*.zip" -x "*~" -x "*.git/*" -x "*.gitignore" -x Makefile
+ZIPIGNORES = -x "*.zip" -x "*~" -x "*.git/*" -x "*.gitignore" -x Makefile -x "temp/*"
 
 $(ZIPFILE): $(FILES)
 	@echo "-------------------------------------------------------"

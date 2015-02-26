@@ -14,6 +14,8 @@
     <files>
         <filename plugin="attachments_for_jevents">attachments_for_jevents.php</filename>
 	<filename>index.html</filename>
+	<filename>LICENSE.txt</filename>
+	<filename>README.md</filename>
 	<folder>language</folder>
     </files>
 

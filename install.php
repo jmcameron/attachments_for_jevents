@@ -71,7 +71,20 @@ class plgAttachmentsAttachments_for_JEventsInstallerScript
 			return false;
 		}
 
-		$app->enqueueMessage(JText::_('ATTACH_ATTACHMENTS_FOR_JEVENTS_PLUGIN_INSTALLED'), 'message');
 		return true;
 	}
+
+
+	/**
+	 * Attachments component postflight function
+	 *
+	 * @param $type : type of installation
+	 * @param $parent : the installer parent
+	 */
+	public function postflight($type, $parent)
+	{
+		$app = JFactory::getApplication();
+		$app->enqueueMessage(JText::_('ATTACH_ATTACHMENTS_FOR_JEVENTS_PLUGIN_INSTALLED'), 'message');
+	}
+
 }
