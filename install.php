@@ -35,7 +35,6 @@ class plgAttachmentsAttachments_for_JEventsInstallerScript
 
 		// Load the installation language file
 		$lang = JFactory::getLanguage();
-		// ??? $lang->load('files_attachments_language_pack.install', dirname(__FILE__));
 	    $lang->load();
 
 		// Verify that the Joomla version is adequate
@@ -61,7 +60,6 @@ class plgAttachmentsAttachments_for_JEventsInstallerScript
 		}
 
 		// Verify that the attachments version is adequate
-		// (Do not update language pack for old versions of Attachments)
 		require_once(JPATH_SITE.'/components/com_attachments/defines.php');
 		$min_version = '3.2.2-Beta3';
 		if (version_compare(AttachmentsDefines::$ATTACHMENTS_VERSION, $min_version, 'lt'))
