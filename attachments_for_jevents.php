@@ -58,6 +58,8 @@ class AttachmentsPlugin_Com_JEvents extends AttachmentsPlugin
 		$this->entity_id_field['jevent']    = 'ev_id';
 		$this->entity_title_field['jevent'] = 'summary'; # actually in vevdetail
 
+		JPluginHelper::importPlugin('jevents', 'save_attachments');
+
 		// Always load the language
 		$this->loadLanguage();
 	}
