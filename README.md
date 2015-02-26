@@ -27,9 +27,9 @@ INSTALLATION
    no need to uninstall it first.  Just install the new version over the old
    one.
 
-2. Install the Attachments for JEvents plugin
+2. Install the Attachments_for_JEvents plugin
 
-3. Enable the Attachments for JEvents plugin
+3. Enable the Attachments_for_JEvents plugin
 
 4. In JEvents, you will need to change on option in order to work on
    attachments with the JEvents event detail editor.   
@@ -39,6 +39,8 @@ INSTALLATION
     * Select the "Intermedia" or "Advanced" options setting
     * Enable the "Show editors button extensions" option (set to 'YES')
     * Save
+
+5. Install the companion Attachments_for_JEvents_Save plugin
 
 You should be able to add and see attachments on any JEvent event detail view
 on the front end or back end.
