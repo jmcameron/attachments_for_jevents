@@ -19,4 +19,12 @@
 	<folder>language</folder>
     </files>
 
+    <config>
+      <fields name="params">
+        <fieldset name="help">
+          <field type="spacer" name="help" class="text" label="ATTACH_ATTACHMENTS_FOR_JEVENTS_PLUGIN_HELP" />
+        </fieldset>
+      </fields>
+    </config>
+
 </extension>

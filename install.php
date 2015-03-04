@@ -85,6 +85,8 @@ class plgAttachmentsAttachments_for_JEventsInstallerScript
 	{
 		$app = JFactory::getApplication();
 		$app->enqueueMessage(JText::_('ATTACH_ATTACHMENTS_FOR_JEVENTS_PLUGIN_INSTALLED'), 'message');
+		$app->enqueueMessage(JText::_('ATTACH_ATTACHMENTS_FOR_JEVENTS_PLUGIN_HELP'), 'message');
+		$app->enqueueMessage(JText::_('ATTACH_ATTACHMENTS_FOR_JEVENTS_PLUGIN_HELP_LOCATION'), 'message');
 	}
 
 }
