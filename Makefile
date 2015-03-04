@@ -1,6 +1,6 @@
 # Makefile for linux
 
-VERSION = "3.2.0-Beta8"
+VERSION = "3.2.2"
 VERSION2 = $(shell echo $(VERSION)|sed 's/ /-/g')
 ZIPFILE = plg_attachments_for_jevents_$(VERSION2).zip
 
