@@ -2,7 +2,7 @@
 <extension type="plugin" group="attachments" version="2.5" method="upgrade">
     <name>plg_attachments_for_jevents</name>
     <version>3.2.2</version>
-    <creationDate>March 3, 2015</creationDate>
+    <creationDate>March 6, 2015</creationDate>
     <author>Jonthan M. Cameron</author>
     <authorEmail>jmcameron@jmcameron.net</authorEmail>
     <authorUrl>http://jmcameron.net/attachments</authorUrl>
@@ -15,7 +15,6 @@
       <filename plugin="attachments_for_jevents">attachments_for_jevents.php</filename>
       <filename>index.html</filename>
       <filename>LICENSE.txt</filename>
-      <filename>README.md</filename>
       <folder>language</folder>
     </files>
 
