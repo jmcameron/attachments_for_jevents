@@ -150,7 +150,7 @@ class AttachmentsPlugin_Com_JEvents extends AttachmentsPlugin
 		$query->select('summary')
 			->from("#__jevents_vevent as ev")
 			->join('LEFT', '#__jevents_vevdetail AS det ON ev.detail_id=det.evdet_id')
-			->where('ev_id=' . (int)$parent_id);
+			->where('ev.ev_id=' . (int)$parent_id);
 		$db->setQuery($query);
 		$title = $db->loadResult();
 		if ($db->getErrorNum())
@@ -512,7 +512,7 @@ class AttachmentsPlugin_Com_JEvents extends AttachmentsPlugin
 		$db    = JFactory::getDBO();
 		$query = $db->getQuery(true);
 		$query->select('ev_id')->from('#__jevents_vevent')
-			->where('ev.ev_id=' . (int)$parent_id . ' AND access in (' . implode(',', $user_levels) . ')');
+			->where('ev_id=' . (int)$parent_id . ' AND access in (' . implode(',', $user_levels) . ')');
 		$db->setQuery($query, 0, 1);
 		$obj = $db->loadObject();
 		if ($db->getErrorNum())
